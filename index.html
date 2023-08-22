@@ -9,21 +9,35 @@
 <body>
   <header>
     <h1>My Portfolio</h1>
+    <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="aboutBtn">About</button>
+        <button id="portfolioBtn">Portfolio</button>
+        <button id="contactBtn">Contact</button>
+    </nav>
     <input type="text" id="filterInput" placeholder="Filter by hashtag">
   </header>
   
   <section id="portfolio">
     <div class="project" data-tags="webdesign">
-      <img src="project1.jpg" alt="Project 1">
+      <img src="project1.jpg" alt="Zoox">
       <h3>Project 1</h3>
       <p>Web Design</p>
     </div>
     <div class="project" data-tags="development">
-      <img src="project2.jpg" alt="Project 2">
+      <img src="project2.jpg" alt="Gateway">
       <h3>Project 2</h3>
       <p>Web Development</p>
     </div>
-    <!-- Add more projects as needed -->
+    <div class="project" data-tags="nasa">
+        <img src="project3.jpg" alt="MarsXR Challenge">
+        <h3>Project 2</h3>
+        <p>Web Development</p>
+      </div>
   </section>
   
   <script src="script.js"></script>

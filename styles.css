@@ -27,6 +27,12 @@ body, h1, h2, h3, p {
     color: white;
   }
 
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   nav ul {
     list-style: none;
     display: flex;
@@ -54,6 +60,7 @@ nav button {
     color: white;
     border: none;
     padding: 10px 20px;
+    margin: 0 10px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;

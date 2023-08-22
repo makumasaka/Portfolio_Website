@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterInput = document.getElementById('filterInput');
     const projects = document.querySelectorAll('.project');
     const buttons = document.querySelectorAll('nav button');
-    const projects = document.querySelectorAll('.project');
   
     filterInput.addEventListener('input', function () {
       const filterValue = filterInput.value.toLowerCase();
@@ -33,4 +32,4 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         });
       });
-  });
+});

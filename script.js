@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterInput = document.getElementById('filterInput');
     const projects = document.querySelectorAll('.project');
     const buttons = document.querySelectorAll('nav button');
+    const projects = document.querySelectorAll('.project');
   
     filterInput.addEventListener('input', function () {
       const filterValue = filterInput.value.toLowerCase();
@@ -19,15 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     buttons.forEach(button => {
         button.addEventListener('click', function () {
-          const targetId = this.id.replace('Btn', ''); // Remove "Btn" from button ID
-          const targetElement = document.getElementById(targetId);
+          const filterTag = this.getAttribute('data-tag');
           
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: 'smooth'
-            });
-          }
+          projects.forEach(project => {
+            const projectTags = project.getAttribute('data-tags').split(' ');
+    
+            if (filterTag === 'all' || projectTags.includes(filterTag)) {
+              project.style.display = 'block';
+            } else {
+              project.style.display = 'none';
+            }
+          });
         });
       });
   });

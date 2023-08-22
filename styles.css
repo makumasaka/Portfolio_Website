@@ -85,7 +85,7 @@ nav button {
     flex: 0 0 calc(33.33% - 20px);
     margin-bottom: 20px;
     border-radius: 25px;
-    background: #73AD21;
+    background: #f39c12;
   }
   
   /* Media Query for mobile devices */

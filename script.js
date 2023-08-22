@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
           projects.forEach(project => {
             const projectTags = project.getAttribute('data-tags').split(' ');
     
-            if (filterTag === 'all' || projectTags.includes(filterTag)) {
+            if (filterTag === 'xr' || projectTags.includes(filterTag)) {
               project.style.display = 'block';
             } else {
               project.style.display = 'none';
@@ -32,4 +32,4 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         });
       });
-});
+    });

@@ -87,7 +87,19 @@ nav button {
     border-radius: 25px;
     background: #f39c12;
   }
-  
+
+  @keyframes shakeAnimation {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+
   /* Media Query for mobile devices */
   @media (max-width: 768px) {
     header {

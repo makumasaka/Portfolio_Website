@@ -10,25 +10,25 @@
   <header>
     <h1>My Portfolio</h1>
     <nav>
-        <button class="nav-button" data-tag="all">All</button>
-        <button class="nav-button" data-tag="about">about</button>
-        <button class="nav-button" data-tag="xr">xr</button>
-        <button class="nav-button" data-tag="nasa">nasa</button>
+        <button data-tag="all">All</button>
+        <button data-tag="about">about</button>
+        <button data-tag="xr">xr</button>
+        <button data-tag="nasa">nasa</button>
     </nav>
   </header>
   
   <section id="portfolio">
-    <div class="project" data-tags="about">
+    <div style="--index: 0;" class="project" data-tags="about">
       <img src="project1.jpg" alt="About">
       <h3>About</h3>
       <p>Hello! Welcome to my website. I’m a creative technologist and web designer based in the Bay Area, CA.</p>
     </div>
-    <div class="project" data-tags="nasa">
+    <div style="--index: 1;" class="project" data-tags="nasa">
         <img src="project2.jpg" alt="Gateway">
       <h3><a href="#gateway">Gateway</a></h3>
       <p>Web Development</p>
     </div>
-    <div class="project" data-tags="xr nasa">
+    <div style="--index: 2;" class="project" data-tags="xr nasa">
         <img src="project3.jpg" alt="MarsXR Challenge">
         <h3><a href="#marsxr">MarsXR Challenge</a></h3>
         <p>Web Development</p>

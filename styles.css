@@ -88,6 +88,10 @@ nav button {
     background: #f39c12;
   }
 
+  .shake-animation {
+    animation: shakeAnimation 0.5s ease-in-out;
+  }
+
   @keyframes shakeAnimation {
     0%, 100% {
       transform: translateX(0);

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     buttons.forEach(button => {
       button.addEventListener('click', function () {
+
         const filterTag = this.getAttribute('data-tag');
         
         projects.forEach(project => {
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         projects.forEach((project, index) => {
             project.style.animation = `fallingStackAnimation 1s cubic-bezier(0.25, 1, 0.5, 1) ${0.2 * index}s forwards`;
         });
+
       });
     });
   });

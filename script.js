@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const projects = document.querySelectorAll('.project');
+    const navButtons = document.querySelectorAll('.nav-button');
   
     buttons.forEach(button => {
       button.addEventListener('click', function () {
@@ -16,11 +17,22 @@ document.addEventListener('DOMContentLoaded', function () {
             project.style.display = 'none';
           }
         });
-
-        projects.forEach((project, index) => {
-            project.style.animation = `fallingStackAnimation 1s cubic-bezier(0.25, 1, 0.5, 1) ${0.2 * index}s forwards`;
-        });
-
       });
     });
+
+    navButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const filterTag = this.getAttribute('data-tag');
+          const matchingProjects = document.querySelectorAll(`.project[data-tags*="${filterTag}"]`);
+    
+          matchingProjects.forEach(project => {
+            project.classList.add('shake-animation');
+    
+            // Remove the animation class after the animation completes
+            project.addEventListener('animationend', function () {
+              project.classList.remove('shake-animation');
+            }, { once: true });
+          });
+        });
+      });
   });

@@ -12,8 +12,9 @@ body, h1, h2, h3, p {
   header {
     background: #333;
     color: white;
-    text-align: stretch;
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .project img {

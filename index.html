@@ -9,14 +9,16 @@
 <body>
   <header>
     <nav>
-        <button data-tag="all">#about</button>
-        <button data-tag="xr">#xr</button>
-        <button data-tag="nasa">#nasa</button>
+        <button data-tag="all" id="1">#about</button>
+        <button data-tag="xr" id="2">#xr</button>
+        <button data-tag="nasa" id="3">#nasa</button>
+        <button data-tag="configurator" id="4">#configurator</button>
     </nav>
+    <p id="test-text">blah</p>
   </header>
   
   <section id="portfolio">
-    <div style="--index: 0;" class="project" data-tags="">
+    <div style="--index: 0;" class="project" data-tags="xr nasa configurator">
       <img src="project1.jpg" alt="About">
       <h3>About</h3>
       <p>Hello! Welcome to my website. I’m a creative technologist and web designer based in the Bay Area, CA.</p>
@@ -31,6 +33,11 @@
         <h3><a href="marsxr.html">MarsXR Challenge</a></h3>
         <p>Web Development</p>
     </div>
+    <div style="--index: 3;" class="project" data-tags="configurator">
+      <img src="project3.jpg" alt="Configurator">
+      <h3><a href="configurator.html">Configurator</a></h3>
+      <p>Web Development</p>
+  </div>
   </section>
   
   <script src="script.js"></script>

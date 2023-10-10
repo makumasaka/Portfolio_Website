@@ -57,7 +57,7 @@ body, h1, h2, h3, p {
 
   /* For buttons */
 nav button {
-    background-color: transparent;
+    background-color: #f35512;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -71,11 +71,16 @@ nav button {
     background-color: #555;
   }
   
+  nav button:active {
+    background-color: #00eaff;
+  }
+  
+
   section {
     padding: 2rem;
   }
   
-  /* Flexbox for portfolio projects */
+  /* Flexbox */
   #portfolio {
     display: flex;
     flex-direction: column;

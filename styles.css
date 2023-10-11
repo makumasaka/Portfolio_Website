@@ -57,7 +57,7 @@ body, h1, h2, h3, p {
 
   /* For buttons */
 nav button {
-    background-color: #f35512;
+    background-color: transparent;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -72,7 +72,7 @@ nav button {
   }
   
   nav button:active {
-    background-color: #00eaff;
+    background-color: #f39c12;
   }
   
 

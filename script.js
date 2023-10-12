@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const projects = document.querySelectorAll('.project');
-    const changeText = document.querySelector("#change-text");
     let activeButtons = []; // Array to keep track of active buttons
 
     buttons.forEach((button, index) => {
@@ -27,9 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 activeButtons.push(filterTag);
                 button.style.backgroundColor = '#f39c12';
             }
-
-            // Update text content
-            changeText.textContent = activeButtons.join(', ');
 
             // Toggle project visibility based on active buttons
             projects.forEach(project => {

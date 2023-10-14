@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const projects = document.querySelectorAll('.project');
     const changeText = document.querySelector("#change-text");
-    let activeButtons = ['all', 'xr', 'configurator', 'nasa']; // Array to keep track of active buttons
+    let activeButtons = ['all', 'xr', 'configurator', 'nasa']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
         button.style.backgroundColor = '#f39c12';

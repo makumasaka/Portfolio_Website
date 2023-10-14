@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const projects = document.querySelectorAll('.project');
-    let activeButtons = []; // Array to keep track of active buttons
+    const changeText = document.querySelector("#change-text");
+    let activeButtons = ['all', 'xr', 'configurator', 'nasa']; // Array to keep track of active buttons
 
     buttons.forEach((button, index) => {
+        button.style.backgroundColor = '#f39c12';
+
         button.addEventListener('click', function () {
             const filterTag = this.getAttribute('data-tag');
             const isActive = activeButtons.includes(filterTag);
@@ -33,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 const isVisible = activeButtons.includes('all') || projectTags.some(tag => activeButtons.includes(tag));
                 project.style.display = isVisible ? 'block' : 'none';
             });
+
+            // Update text content
+            changeText.textContent = activeButtons.join(', ');
 
             // Add stacking animation
             projects.forEach((project, index) => {

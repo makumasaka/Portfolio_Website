@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const projects = document.querySelectorAll('.project');
-    const rstbtn = document.querySelector("#reset");
     const changeText = document.querySelector("#change-text");
-    let activeButtons = ['xr', 'configurator', 'nasa']; // Array to keep track of active buttons set to clear at first click
+    let activeButtons = ['about', 'xr', 'configurator', 'nasa']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
         button.style.backgroundColor = '#f39c12';
@@ -12,10 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const filterTag = this.getAttribute('data-tag');
             const isActive = activeButtons.includes(filterTag);
 
-            if (activeButtons.length === buttons.length) {
-                // All buttons are active, clicking any button will deactivate all buttons
-                activeButtons = [];
+            if (filterTag === 'about') {
+                //When 'about' button is clicked, all projects and buttons are activated
+                activeButtons = ['about', 'xr', 'configurator', 'nasa'];
                 buttons.forEach(btn => {
+                    btn.style.backgroundColor = '#f39c12';
+                });
+            } else if (activeButtons.length === buttons.length) {
+                // All buttons are active, clicking any button will deactivate all buttons
+                activeButtons = ['about'];
+                buttons.forEach(btn => {
+                    // Update text content
                     btn.style.backgroundColor = 'transparent';
                 });
                 activeButtons.push(filterTag);
@@ -31,15 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.style.backgroundColor = '#f39c12';
             }
 
+            // Set the background color of the 'about' button to '#f39c12'
+            const aboutButton = document.querySelector('button[data-tag="about"]');
+            aboutButton.style.backgroundColor = '#f39c12';
+
             // Toggle project visibility based on active buttons
             projects.forEach(project => {
                 const projectTags = project.getAttribute('data-tags').split(' ');
                 const isVisible = activeButtons.includes('all') || projectTags.some(tag => activeButtons.includes(tag));
                 project.style.display = isVisible ? 'block' : 'none';
             });
-
-            // Update text content
-            changeText.textContent = activeButtons.join(', ');
 
             // Add stacking animation
             projects.forEach((project, index) => {

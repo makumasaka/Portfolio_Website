@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const projects = document.querySelectorAll('.project');
-    const changeText = document.querySelector("#change-text");
-    let activeButtons = ['about', 'xr', 'configurator', 'nasa']; // Array to keep track of active buttons set to clear at first click
+    let activeButtons = ['reset', 'xr', 'configurator', 'nasa']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
         button.style.backgroundColor = '#f39c12';
@@ -11,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const filterTag = this.getAttribute('data-tag');
             const isActive = activeButtons.includes(filterTag);
 
-            if (filterTag === 'about') {
+            if (filterTag === 'reset') {
                 //When 'about' button is clicked, all projects and buttons are activated
-                activeButtons = ['about', 'xr', 'configurator', 'nasa'];
+                activeButtons = ['reset', 'xr', 'configurator', 'nasa'];
                 buttons.forEach(btn => {
                     btn.style.backgroundColor = '#f39c12';
                 });
             } else if (activeButtons.length === buttons.length) {
                 // All buttons are active, clicking any button will deactivate all buttons
-                activeButtons = ['about'];
+                activeButtons = ['reset'];
                 buttons.forEach(btn => {
                     // Update text content
                     btn.style.backgroundColor = 'transparent';
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // Set the background color of the 'about' button to '#f39c12'
-            const aboutButton = document.querySelector('button[data-tag="about"]');
+            const aboutButton = document.querySelector('button[data-tag="reset"]');
             aboutButton.style.backgroundColor = '#f39c12';
 
             // Toggle project visibility based on active buttons

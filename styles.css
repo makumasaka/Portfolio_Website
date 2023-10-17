@@ -8,13 +8,19 @@ body, h1, h2, h3, p {
     font-family: Arial, sans-serif;
     line-height: 1.6;
   }
+
+  .spacer{
+    height: 8rem;
+  }
   
   header {
-    background: #333;
-    color: white;
-    padding: 1rem;
+    background: #ffffffe5;
+    color: rgb(255, 255, 255);
+    padding: 1.5rem;
     display: flex;
     flex-wrap: wrap;
+    position: fixed;
+    z-index: 1000;
   }
   
   .project img {
@@ -30,7 +36,9 @@ body, h1, h2, h3, p {
 
   nav {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
     align-items: center;
   }
 
@@ -58,10 +66,10 @@ body, h1, h2, h3, p {
   /* For buttons */
 nav button {
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 5px 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
@@ -76,7 +84,6 @@ nav button {
     background-color: #f39c12;
     transform: scale(0.95);
   }
-  
 
   section {
     padding: 2rem;

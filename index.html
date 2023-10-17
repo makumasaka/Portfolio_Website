@@ -6,37 +6,62 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <nav>
         <button data-tag="reset">reset</button>
-        <button data-tag="xr">#xr</button>
-        <button data-tag="nasa">#nasa</button>
+        <button data-tag="xr">#extended_reality</button>
+        <button data-tag="aerospace">#aerospace</button>
         <button data-tag="configurator">#configurator</button>
+        <button data-tag="art">#art</button>
+        <button data-tag="av">#autonomous_vehicles</button>
+        <button data-tag="webdev">#web_development</button>
+        <button data-tag="product">#product_design</button>
+        <button data-tag="appdev">#app_development</button>
     </nav>
   </header>
   
+  <div class="spacer">
+    <!--This is empty space at the top of the page-->
+  </div>
+
   <section id="portfolio">
     <div style="--index: 0;" class="project" data-tags="reset">
       <img src="project1.jpg" alt="About">
       <h3>About</h3>
       <p>Hello! Welcome to my website. I’m a creative technologist and web designer based in the Bay Area, CA.</p>
     </div>
-    <div style="--index: 1;" class="project" data-tags="nasa">
+    <div style="--index: 1;" class="project" data-tags="aerospace">
         <img src="project2.jpg" alt="Gateway">
       <h3><a href="gateway.html">Gateway</a></h3>
       <p>Web Development</p>
     </div>
-    <div style="--index: 2;" class="project" data-tags="xr nasa">
+    <div style="--index: 2;" class="project" data-tags="xr aerospace">
         <img src="project3.jpg" alt="MarsXR Challenge">
         <h3><a href="marsxr.html">MarsXR Challenge</a></h3>
         <p>Web Development</p>
     </div>
-    <div style="--index: 3;" class="project" data-tags="configurator">
+    <div style="--index: 3;" class="project" data-tags="configurator webdev">
       <img src="project3.jpg" alt="Configurator">
       <h3><a href="configurator.html">Configurator</a></h3>
       <p>Web Development</p>
-  </div>
+    </div>
+    <div style="--index: 3;" class="project" data-tags="product appdev av">
+      <img src="project3.jpg" alt="Touch Screen Application">
+      <h3><a href="configurator.html">Touch Screen Application</a></h3>
+      <p>Web Development</p>
+    </div>
+    <div style="--index: 3;" class="project" data-tags="art">
+      <img src="project3.jpg" alt="Cloud Renders">
+      <h3><a href="configurator.html">Cloud Renders</a></h3>
+      <p>Web Development</p>
+    </div>
+    <div style="--index: 3;" class="project" data-tags="art product">
+      <img src="project3.jpg" alt="Folding Chair">
+      <h3><a href="configurator.html">Folding Chair</a></h3>
+      <p>Web Development</p>
+    </div>
   </section>
   
   <script src="script.js"></script>

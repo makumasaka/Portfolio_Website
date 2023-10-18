@@ -95,30 +95,29 @@ nav button {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    
   }
   
   .project {
     flex: 0 0 calc(33.33% - 20px);
     margin-bottom: 20px;
+    padding: 25px;
     border-radius: 25px;
     background: #f39c12;
-    animation: fallingStackAnimation 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    animation-delay: calc(0.01s * var(--index));
   }
 
-  @keyframes fallingStackAnimation {
+  @keyframes expandingAnimation {
     0% {
-      transform: translateY(100%);
-      opacity: 0;
+      translate: 0px 0px;
     }
-    60% {
-      transform: translateY(-10%);
+    50% {
+      translate: 0px 7px;
     }
-    80% {
-      transform: translateY(5%);
+    75% {
+      translate: 0px 3px;
     }
     100% {
-      transform: translateY(0);
+      translate: 0px 5px;
     }
   }
 
@@ -136,9 +135,5 @@ nav button {
       flex-direction: column;
     }
     
-    .project {
-      flex: 1 1 auto;
-      margin-right: 0;
-    }
   }
 

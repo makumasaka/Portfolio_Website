@@ -44,12 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
             projects.forEach(project => {
                 const projectTags = project.getAttribute('data-tags').split(' ');
                 const isVisible = activeButtons.includes('all') || projectTags.some(tag => activeButtons.includes(tag));
-                project.style.display = isVisible ? 'block' : 'none';
-            });
 
-            // Add stacking animation
-            projects.forEach((project, index) => {
-                project.style.animation = `fallingStackAnimation 0.5s cubic-bezier(0.25, 1, 0.5, 1)`;
+                if (isVisible) {
+                    project.style.animation = `expandingAnimation .25s`;
+                    project.style.display = 'block';
+                } else {
+                    project.style.animation = 'none'; // Reset animation
+                    project.style.display = 'none';
+                }
             });
         });
     });

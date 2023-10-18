@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const isVisible = activeButtons.includes('all') || projectTags.some(tag => activeButtons.includes(tag));
 
                 if (isVisible) {
-                    project.style.animation = `expandingAnimation .25s`;
+                    project.style.animation = `expandingAnimation .3s`;
                     project.style.display = 'block';
                 } else {
                     project.style.animation = 'none'; // Reset animation

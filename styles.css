@@ -9,12 +9,20 @@ body, h1, h2, h3, p {
     line-height: 1.6;
   }
 
+  h2 {
+    font-family: Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: 200;
+    line-height: 1.2;
+  }
+
   .spacer{
-    height: 8rem;
+    height: 12rem;
   }
   
   header {
-    background: #ffffffe5;
+    background: #ffffffab;
+    backdrop-filter: blur(3px);
     color: rgb(255, 255, 255);
     padding: 1.5rem;
     display: flex;
@@ -108,16 +116,16 @@ nav button {
 
   @keyframes expandingAnimation {
     0% {
-      translate: 0px 0px;
+      transform: scale(0.75);
     }
     50% {
-      translate: 0px 7px;
+      transform: scale(1.025);
     }
     75% {
-      translate: 0px 3px;
+      transform: scale(0.975);
     }
     100% {
-      translate: 0px 5px;
+      transform: scale(1.0);
     }
   }
 

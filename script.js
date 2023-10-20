@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
-        button.style.backgroundColor = '#f39c12';
+        button.style.backgroundColor = '#ffffff';
 
         button.addEventListener('click', function () {
             const filterTag = this.getAttribute('data-tag');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 //When 'about' button is clicked, all projects and buttons are activated
                 activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev'];
                 buttons.forEach(btn => {
-                    btn.style.backgroundColor = '#f39c12';
+                    btn.style.backgroundColor = '#ffffff';
                 });
             } else if (activeButtons.length === buttons.length) {
                 // All buttons are active, clicking any button will deactivate all buttons
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     btn.style.backgroundColor = 'transparent';
                 });
                 activeButtons.push(filterTag);
-                button.style.backgroundColor = '#f39c12';
+                button.style.backgroundColor = '#ffffff';
             } else if (isActive) {
                 // Button is active, deactivate it
                 const index = activeButtons.indexOf(filterTag);
@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 // Button is inactive, activate it
                 activeButtons.push(filterTag);
-                button.style.backgroundColor = '#f39c12';
+                button.style.backgroundColor = '#ffffff';
             }
 
             // Set the background color of the 'about' button to '#f39c12'
             const aboutButton = document.querySelector('button[data-tag="reset"]');
-            aboutButton.style.backgroundColor = '#f39c12';
+            aboutButton.style.backgroundColor = '#ffffff';
 
             // Toggle project visibility based on active buttons
             projects.forEach(project => {

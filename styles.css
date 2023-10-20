@@ -7,6 +7,7 @@ body, h1, h2, h3, p {
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background: #000000;
   }
 
   h2 {
@@ -17,7 +18,7 @@ body, h1, h2, h3, p {
   }
 
   .spacer{
-    height: 75px;
+    height: 80px;
   }
 
     /* Media query for smaller viewport widths */
@@ -37,15 +38,15 @@ body, h1, h2, h3, p {
   /* Media query for even smaller viewport widths */
   @media (max-width: 600px) {
     .spacer {
-        height: 210px; /* Further increase height for even smaller viewports */
+        height: 225px; /* Further increase height for even smaller viewports */
     }
   }
   
   header {
-    background: #ffffffab;
+    background: #000000ab;
     backdrop-filter: blur(3px);
-    color: rgb(255, 255, 255);
-    padding: 1.5rem;
+    color: rgb(0, 0, 0);
+    padding: 1.6rem;
     display: flex;
     flex-wrap: wrap;
     position: fixed;
@@ -111,7 +112,7 @@ nav button {
   }
   
   nav button:active {
-    background-color: #f39c12;
+    background-color: #ffffff;
     transform: scale(0.95);
   }
 
@@ -130,10 +131,10 @@ nav button {
   
   .project {
     flex: 0 0 calc(33.33% - 20px);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 25px;
     border-radius: 25px;
-    background: #f39c12;
+    background: #ffffff;
   }
 
   @keyframes expandingAnimation {

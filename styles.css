@@ -17,7 +17,28 @@ body, h1, h2, h3, p {
   }
 
   .spacer{
-    height: 12rem;
+    height: 75px;
+  }
+
+    /* Media query for smaller viewport widths */
+  @media (max-width: 1400px) {
+    .spacer {
+        height: 125px; /* Increase height for smaller viewports */
+    }
+  }
+
+  /* Media query for even smaller viewport widths */
+  @media (max-width: 800px) {
+    .spacer {
+        height: 165px; /* Further increase height for even smaller viewports */
+    }
+  }
+
+  /* Media query for even smaller viewport widths */
+  @media (max-width: 600px) {
+    .spacer {
+        height: 210px; /* Further increase height for even smaller viewports */
+    }
   }
   
   header {
@@ -28,6 +49,7 @@ body, h1, h2, h3, p {
     display: flex;
     flex-wrap: wrap;
     position: fixed;
+    width: 100%;
     z-index: 1000;
   }
   

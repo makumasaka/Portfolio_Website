@@ -5,15 +5,32 @@ body, h1, h2, h3, p {
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: Handjet, sans-serif;
     line-height: 1.6;
     background: #000000;
   }
 
+  button{
+    font-family: Handjet, sans-serif;
+    font-size: medium;
+    color: #000000;
+  }
+
+  h1 {
+    font-family: Handjet, sans-serif;
+    font-size: large;
+    line-height: 1.2;
+  }
+
   h2 {
-    font-family: Arial, sans-serif;
+    font-family: Handjet, sans-serif;
+    font-size: x-large;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-family: Handjet, sans-serif;
     font-size: xx-large;
-    font-weight: 200;
     line-height: 1.2;
   }
 
@@ -43,15 +60,18 @@ body, h1, h2, h3, p {
   }
   
   header {
-    background: #000000ab;
-    backdrop-filter: blur(3px);
-    color: rgb(0, 0, 0);
-    padding: 1.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    color: rgb(252, 252, 252);
+    border: 2px solid rgba(75, 75, 75, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-wrap: wrap;
     position: fixed;
-    width: 100%;
     z-index: 1000;
+    margin: 1rem;
+    padding: 7px;
   }
   
   .project img {
@@ -97,14 +117,14 @@ body, h1, h2, h3, p {
   /* For buttons */
 nav button {
     background-color: transparent;
-    color: rgb(0, 0, 0);
-    border: none;
     padding: 10px 20px;
-    margin: 5px 5px;
+    margin: 7px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
-    border-radius: 10px;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color:  #ffffff;
+    border-style: solid;
   }
   
   nav button:hover {

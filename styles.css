@@ -34,6 +34,11 @@ body, h1, h2, h3, p {
     line-height: 1.2;
   }
 
+  a {
+    text-decoration: none; /* Removes the underline */
+    color: #000000; /* Sets the color of the hyperlink text (replace #ff0000 with your desired color) */
+  }
+
   .spacer{
     height: 80px;
   }

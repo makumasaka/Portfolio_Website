@@ -69,7 +69,7 @@ body, h1, h2, h3, p {
     backdrop-filter: blur(16px);
     color: rgb(252, 252, 252);
     border: 2px solid rgba(75, 75, 75, 0.1);
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-wrap: wrap;
@@ -79,21 +79,8 @@ body, h1, h2, h3, p {
     padding: 7px;
   }
   
-  .project img {
-    max-width: 100%;
-  }
-
-  .image-container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    overflow-anchor: 10%;
-    border-radius: 10px;
-  }
-  
   footer {
     text-align: center;
-    padding: 1rem;
     background: #333;
     color: white;
   }
@@ -128,13 +115,13 @@ body, h1, h2, h3, p {
   }
 
   /* For buttons */
-nav button {
+  nav button {
     background-color: transparent;
     padding: 10px 20px;
     margin: 7px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 12px;
+    border-radius: 15px;
     border-width: 2px;
     border-color:  #ffffff;
     border-style: solid;
@@ -164,10 +151,29 @@ nav button {
   
   .project {
     flex: 0 0 calc(33.33% - 20px);
+    display: flex;
+    flex-direction: row;
+    align-items: last baseline;
     margin-bottom: 30px;
     padding: 25px;
-    border-radius: 25px;
+    border-radius: 30px;
     background: #ffffff;
+  }
+
+  .project img {
+    max-width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    overflow-anchor: 10%;
+    border-radius: 20px;
+  }
+
+  .text-content {
+    margin-right: 10rem; /* Adjust the margin between text and image as needed */
   }
 
   @keyframes expandingAnimation {

@@ -40,27 +40,27 @@ body, h1, h2, h3, p {
   }
 
   .spacer{
-    height: 80px;
+    height: 90px;
   }
 
     /* Media query for smaller viewport widths */
   @media (max-width: 1400px) {
     .spacer {
-        height: 125px; /* Increase height for smaller viewports */
+        height: 145px; /* Increase height for smaller viewports */
     }
   }
 
   /* Media query for even smaller viewport widths */
   @media (max-width: 800px) {
     .spacer {
-        height: 165px; /* Further increase height for even smaller viewports */
+        height: 200px; /* Further increase height for even smaller viewports */
     }
   }
 
   /* Media query for even smaller viewport widths */
   @media (max-width: 600px) {
     .spacer {
-        height: 225px; /* Further increase height for even smaller viewports */
+        height: 260px; /* Further increase height for even smaller viewports */
     }
   }
   

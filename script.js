@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
-    const projects = document.querySelectorAll('.project');
+    const boxes = document.querySelectorAll('.box');
     let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 activeButtons = ['reset'];
                 buttons.forEach(btn => {
                     // Update text content
-                    btn.style.backgroundColor = 'transparent';
+                    btn.style.backgroundColor = '#ffffff60';
                 });
                 activeButtons.push(filterTag);
                 button.style.backgroundColor = '#ffffff';
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Button is active, deactivate it
                 const index = activeButtons.indexOf(filterTag);
                 activeButtons.splice(index, 1);
-                button.style.backgroundColor = 'transparent';
+                button.style.backgroundColor = '#ffffff60';
             } else {
                 // Button is inactive, activate it
                 activeButtons.push(filterTag);
@@ -41,16 +41,16 @@ document.addEventListener('DOMContentLoaded', function () {
             aboutButton.style.backgroundColor = '#ffffff';
 
             // Toggle project visibility based on active buttons
-            projects.forEach(project => {
-                const projectTags = project.getAttribute('data-tags').split(' ');
-                const isVisible = activeButtons.includes('all') || projectTags.some(tag => activeButtons.includes(tag));
+            boxes.forEach(box => {
+                const boxTags = box.getAttribute('data-tags').split(' ');
+                const isVisible = activeButtons.includes('all') || boxTags.some(tag => activeButtons.includes(tag));
 
                 if (isVisible) {
-                    project.style.animation = `expandingAnimation .3s`;
-                    project.style.display = 'block';
+                    box.style.animation = `expandingAnimation .3s`;
+                    box.style.display = 'block';
                 } else {
-                    project.style.animation = 'none'; // Reset animation
-                    project.style.display = 'none';
+                    box.style.animation = 'none'; // Reset animation
+                    box.style.display = 'none';
                 }
             });
         });

@@ -149,7 +149,7 @@ body, h1, h2, h3, p {
     
   }
   
-  .project {
+  .box {
     flex: 0 0 calc(33.33% - 20px);
     display: flex;
     flex-direction: row;
@@ -158,6 +158,18 @@ body, h1, h2, h3, p {
     padding: 25px;
     border-radius: 30px;
     background: #ffffff;
+  }
+
+  .box a {
+    text-decoration: underline;
+  }
+  
+  .project:hover {
+    transform: scale(1.025);
+  }
+
+  .project:active {
+    transform: scale(1);
   }
 
   .project img {

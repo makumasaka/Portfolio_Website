@@ -1,11 +1,13 @@
 /* Reset some default styles */
+
 body, h1, h2, h3, p {
+    font-family: 'fonts/GT America Regular.otf';
     margin: 0;
     padding: 0;
   }
   
   body {
-    font-family: Handjet, sans-serif;
+    font-family: GT America, sans-serif;
     line-height: 1.6;
     background: #000000;
   }
@@ -17,7 +19,7 @@ body, h1, h2, h3, p {
   }
 
   h1 {
-    font-family: Handjet, sans-serif;
+    font-family: GT America, sans-serif;
     font-size: large;
     line-height: 1.2;
   }

@@ -29,6 +29,8 @@ body, h1, h2, h3, p {
     font-weight: 600;
     font-size: x-large;
     line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   h3 {
@@ -160,7 +162,7 @@ body, h1, h2, h3, p {
     align-items: center;
     margin-bottom: 30px;
     padding: 25px;
-    border-radius: 30px;
+    border-radius: 40px;
     background: #ffffff;
   }
 

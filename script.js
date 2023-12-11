@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const boxes = document.querySelectorAll('.box');
-    let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev']; // Array to keep track of active buttons set to clear at first click
+    let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev', 'about']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
         button.style.backgroundColor = '#ffffff';
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const isActive = activeButtons.includes(filterTag);
 
             if (filterTag === 'reset') {
-                //When 'about' button is clicked, all projects and buttons are activated
-                activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev'];
+                //When 'reset' button is clicked, all projects and buttons are activated
+                activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev', 'about'];
                 buttons.forEach(btn => {
                     btn.style.backgroundColor = '#ffffff';
                 });

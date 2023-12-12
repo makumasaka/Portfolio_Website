@@ -184,7 +184,11 @@ body, h1, h2, h3, p {
   }
 
   .project img {
-    max-width: 100%;
+    width: 100%;
+  }
+
+  .about img {
+    height: 100%;
   }
 
   .image-container {

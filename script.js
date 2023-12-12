@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (isVisible) {
                     box.style.animation = `expandingAnimation .3s`;
-                    box.style.display = 'block';
+                    box.style.display = 'flex';
                 } else {
                     box.style.animation = 'none'; // Reset animation
                     box.style.display = 'none';

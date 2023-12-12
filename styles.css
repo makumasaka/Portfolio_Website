@@ -24,6 +24,11 @@ body, h1, h2, h3, p {
     line-height: 1.2;
   }
 
+  mark.grey {
+    color: #555;
+    background: none;
+  }
+
   h2 {
     font-family: 'Schibsted Grotesk', sans-serif;
     font-weight: 600;
@@ -191,7 +196,8 @@ body, h1, h2, h3, p {
   }
 
   .text-content {
-    margin-right: 5vw; /* Adjust the margin between text and image as needed */
+    margin-left: 3vw; /* Adjust the margin between text and image as needed */
+    margin-right: 5vw;
   }
 
   @keyframes expandingAnimation {

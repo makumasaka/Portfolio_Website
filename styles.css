@@ -91,9 +91,11 @@ body, h1, h2, h3, p {
   }
   
   footer {
-    text-align: center;
-    background: #333;
-    color: white;
+    text-align: right;
+    justify-content: right;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1000;
   }
 
   nav {
@@ -187,6 +189,17 @@ body, h1, h2, h3, p {
     max-width: 100%;
   }
 
+  .proj-box {
+    flex: 0 0 calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 40px;
+    background: #ffffff;
+  }
+
   .about img {
     min-width: 100px;
     max-width: 500px;
@@ -214,6 +227,12 @@ body, h1, h2, h3, p {
   .text-content {
     margin-left: 3vw; /* Adjust the margin between text and image as needed */
     margin-right: 5vw;
+  }
+
+  .proj-text-content{
+    margin-left: 10px; /* Adjust the margin between text and image as needed */
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
 
   @keyframes expandingAnimation {

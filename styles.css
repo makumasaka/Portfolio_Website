@@ -201,7 +201,7 @@ body, h1, h2, h3, p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 20px;
     padding: 25px;
     border-radius: 40px;
     background: #ffffff;
@@ -228,8 +228,8 @@ body, h1, h2, h3, p {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-bottom: 30px;
-    padding: 25px;
+    margin: 20px;
+    padding: 50px;
     border-radius: 40px;
     background: #ffffff;
   }

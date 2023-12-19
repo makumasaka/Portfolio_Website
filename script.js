@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const boxes = document.querySelectorAll('.box');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev', 'about']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
@@ -55,4 +56,32 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // Show or hide "top" button based on scroll position
+    window.onscroll = function () {
+        // Show or hide the button based on scroll position
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollToTopBtn.style.display = 'block';
+        } else {
+          scrollToTopBtn.style.display = 'none';
+        }
+      };
+
+    // Scroll to the top smoothly when the "top" button is clicked
+    scrollToTopBtn.addEventListener('click', function () {
+        // Scroll to the top smoothly
+        scrollToTopSmoothly();
+      });
+    
+      function scrollToTopSmoothly() {
+        const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    
+        if (currentPosition > 0) {
+          window.requestAnimationFrame(scrollToTopSmoothly);
+          window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+      }
+
+
+
 });

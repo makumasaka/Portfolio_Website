@@ -79,7 +79,7 @@ body, h1, h2, h3, p {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(16px);
     color: rgb(252, 252, 252);
-    border: 2px solid rgba(75, 75, 75, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.505);
     border-radius: 30px;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -130,10 +130,10 @@ body, h1, h2, h3, p {
 
   #logo-container{
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     padding: 5px;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 150px;
+    max-height: 150px;
   }
 
   #logo-img{
@@ -176,7 +176,7 @@ body, h1, h2, h3, p {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(16px);
     color: rgb(252, 252, 252);
-    border: 2px solid rgba(75, 75, 75, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.505);
     border-radius: 30px;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
     padding: 30px;

@@ -136,10 +136,11 @@ body, h1, h2, h3, p {
     max-height: 100px;
   }
 
-  #logo-container img{
+  #logo-img{
     width: 100%;
     height: auto;
   }
+
 
   /* For buttons */
   nav button {

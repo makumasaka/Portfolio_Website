@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const boxes = document.querySelectorAll('.box');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const video = document.getElementById('video');
     let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev', 'about']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
@@ -81,7 +82,5 @@ document.addEventListener('DOMContentLoaded', function () {
           window.scrollTo(0, currentPosition - currentPosition / 8);
         }
       }
-
-
 
 });

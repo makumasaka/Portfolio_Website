@@ -14,13 +14,25 @@
 </head>
 
 <body>
-  <div id="logo-container">
+  <div id="logo-container"  onmouseover="playVideo()" onmouseout="pauseVideo()">
     <a href="index.html">
-      <video id="logo-img" width="200" height="200">
+      <video id="logo-img" width="200" height="200" loop>
         <source src="./images/logo/GlassLogo-vp9-chrome.webm" type="video/webm">
       </video>
     </a>
   </div>
+
+  <script>
+    var video = document.getElementById("logo-img");
+
+    function playVideo() {
+        video.play();
+    }
+
+    function pauseVideo() {
+        video.pause();
+    }
+  </script>
 
   <header>
     <nav>

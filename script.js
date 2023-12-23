@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const boxes = document.querySelectorAll('.box');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    const video = document.getElementById('video');
     let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev', 'about']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
@@ -82,5 +81,33 @@ document.addEventListener('DOMContentLoaded', function () {
           window.scrollTo(0, currentPosition - currentPosition / 8);
         }
       }
+
+    // Get logo video element
+    var video = document.getElementById("logo-img");
+
+    // Add event listener for mouseover
+    video.addEventListener("mouseover", function() {
+    // Set the loop attribute to true
+    video.loop = true;
+  
+    // Check if the video is paused and resume playback
+    if (video.paused) {
+      video.play();
+    }
+    });
+  
+    // Add event listener for mouseout
+    video.addEventListener("mouseout", function() {
+        // Remove the loop attribute
+        video.loop = false;
+    });
+  
+    // Add event listener for the end of the video
+    video.addEventListener("ended", function() {
+        // If the cursor is not hovering, pause the video
+        if (!video.loop) {
+              video.pause();
+        }
+    });
 
 });

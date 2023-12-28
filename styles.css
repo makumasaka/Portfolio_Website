@@ -144,6 +144,7 @@ body, h1, h2, h3, p {
 
   /* For buttons */
   nav button {
+    color: #000000;
     background-color: transparent;
     padding: 10px 20px;
     margin: 7px;

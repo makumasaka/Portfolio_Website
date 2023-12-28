@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('nav button');
     const boxes = document.querySelectorAll('.box');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev', 'about']; // Array to keep track of active buttons set to clear at first click
+    let activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev']; // Array to keep track of active buttons set to clear at first click
 
     buttons.forEach((button, index) => {
         button.style.backgroundColor = '#ffffff';
+        button.style.color = '#000000';
+        
 
         button.addEventListener('click', function () {
             const filterTag = this.getAttribute('data-tag');
@@ -13,33 +15,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (filterTag === 'reset') {
                 //When 'reset' button is clicked, all projects and buttons are activated
-                activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev', 'about'];
+                activeButtons = ['reset', 'xr', 'configurator', 'aerospace', 'art', 'av', 'webdev', 'product', 'appdev'];
                 buttons.forEach(btn => {
                     btn.style.backgroundColor = '#ffffff';
+                    btn.style.color = '#000000';
                 });
             } else if (activeButtons.length === buttons.length) {
                 // All buttons are active, clicking any button will deactivate all buttons
                 activeButtons = ['reset'];
                 buttons.forEach(btn => {
                     // Update text content
-                    btn.style.backgroundColor = '#ffffff60';
+                    btn.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    btn.style.color = '#ffffff';
                 });
                 activeButtons.push(filterTag);
                 button.style.backgroundColor = '#ffffff';
+                button.style.color = '#000000';
             } else if (isActive) {
                 // Button is active, deactivate it
                 const index = activeButtons.indexOf(filterTag);
                 activeButtons.splice(index, 1);
-                button.style.backgroundColor = '#ffffff60';
+                button.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                button.style.color = '#ffffff';
             } else {
                 // Button is inactive, activate it
                 activeButtons.push(filterTag);
                 button.style.backgroundColor = '#ffffff';
+                button.style.color = '#000000';
             }
 
-            // Set the background color of the 'about' button to '#ffffff'
-            const aboutButton = document.querySelector('button[data-tag="reset"]');
-            aboutButton.style.backgroundColor = '#ffffff';
+            // Set the background color of the 'reset' button to '#ffffff'
+            const resetButton = document.querySelector('button[data-tag="reset"]');
+            resetButton.style.backgroundColor = '#ffffff';
+            resetButton.style.color = '#000000';
 
             // Toggle project visibility based on active buttons
             boxes.forEach(box => {

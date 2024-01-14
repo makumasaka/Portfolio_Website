@@ -55,7 +55,7 @@ body, h1, h2, h3, p {
   }
 
     /* Media query for smaller viewport widths */
-  @media (max-width: 1400px) {
+  @media (max-width: 1700px) {
     .spacer {
         height: 145px; /* Increase height for smaller viewports */
     }
